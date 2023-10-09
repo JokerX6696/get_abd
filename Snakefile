@@ -16,6 +16,6 @@ rule map2b:
         host = ''
     shell:
         """
-	python3 /home/zhengfuxing/tool/scripts/MAP2B.py -i cleandata_list.txt -o MAP2B -e 5 -s GTDB -d /oeK8S/public/automation/projects/qingdao/DNA/dna/2bRAD-M/2023/08/DZQD20230777906-b4/Basic/database/micro -p 6 -g 5 1>log.o 2>log.e        
+	    python3 /home/zhengfuxing/tool/scripts/MAP2B.py -i cleandata_list.txt -o MAP2B -e 5 -s GTDB -d /home/zhengfuxing/tool/database/micro -p 6 -g 5 1>log.o 2>log.e        
         python3 /home/zhengfuxing/tool/scripts/MAP2B.py/update_mapping_file_after_MAP2B.py -i MAP2B/none_micro_smp.txt -d ./ 1>log.o2 2>log.e2
 	"""
