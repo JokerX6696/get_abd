@@ -3,7 +3,7 @@ __default__:
   mem: "8"
   image: "swr.cn-east-2.myhuaweicloud.com/oedocker/micro_16s:v1.0"
   namespace: "k8s-dna"
-  custom_prop: "dzqd20230777906-b4"
+  custom_prop: "zfxsdcjdrw"
   activeDeadlineSeconds: "108000"
 
 # 数据过滤
