@@ -1,0 +1,142 @@
+__default__:
+  cpu: "1" 
+  mem: "8"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/micro_16s:v1.0"
+  namespace: "k8s-dna"
+  custom_prop: "dzqd20230777906-b4"
+  activeDeadlineSeconds: "108000"
+
+# 数据过滤
+qc_find_raw:
+  cpu: "1"
+  mem: "4"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_qc:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_sum_md5:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_qcstat_sum:    
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_draw:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_basestat:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+  
+qc_basestat_sum:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_upload_clean:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+qc_summary:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2brad:v20230626
+
+# 定性定量
+pre_datalist:
+  cpu: "1"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2bm_abd:v1.0
+
+map2b:
+  cpu: "16"
+  mem: "128"
+  image: swr.cn-east-2.myhuaweicloud.com/oedocker/2bm_abd:v1.0
+
+# 多样性分析
+avg_analysis:
+  cpu: "16"
+  mem: "128"
+
+alpha_rank:
+  cpu: "2"
+  mem: "16"
+
+group_alpha_rank:
+  cpu: "2"
+  mem: "16"
+
+rpt_prepare:
+  cpu: "16"
+  mem: "128"
+  activeDeadlineSeconds: "86400"
+
+group_rpt_prepare:
+  cpu: "16"
+  mem: "128"
+  activeDeadlineSeconds: "86400"
+
+tax_assign:
+  cpu: "8"
+  mem: "64"
+
+picrust_pipe:
+  cpu: "8"
+  mem: "64"
+
+group_picrust_pipe:
+  cpu: "8"
+  mem: "64"
+
+picrust2bm_pipe:
+  cpu: "8"
+  mem: "64"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/micro_16s:v1.1"
+
+group_picrust2bm_pipe:
+  cpu: "8"
+  mem: "64"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/micro_16s:v1.1"
+
+rpt_html:
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/drna_rpt:v1.1.1"
+
+rpt_compress:
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/drna_rpt:v1.0"
+
+qiime_plot:
+  cpu: "8"
+  mem: "64"
+
+group_qiime_plot:
+  cpu: "8"
+  mem: "64"
+
+####
+
+subseq:
+  cpu: "2"
+  mem: "8"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/oeqc_dna:v1.0"
+
+make_manifest:
+  cpu: "1"
+  mem: "8"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/oeqc_dna:v1.0"
+
+fastq2qza:
+  cpu: "1"
+  mem: "8"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/oeqc_dna:v1.0"
+
+denoise:
+  cpu: "8"
+  mem: "64"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/oeqc_dna:v1.0"
+  activeDeadlineSeconds: "57600" 
+
+qc_check:
+  cpu: "1"
+  mem: "8"
+  image: "swr.cn-east-2.myhuaweicloud.com/oedocker/oeqc_rna:v1.0"
