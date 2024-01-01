@@ -12,3 +12,6 @@ paste -d '\t' \
 # <(ls ${cleandata_dir}/*|sed 's|\S*/||g;s/.BcgI.fq.gz//g;s/.fq.gz//g') \
 # <(ls ${cleandata_dir}/*)  \
 # > cleandata_list.txt
+
+
+# 流程搭建可能用到
